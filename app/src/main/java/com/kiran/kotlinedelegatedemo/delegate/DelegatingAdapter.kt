@@ -45,7 +45,7 @@ abstract class DelegatingAdapter<T> internal constructor() : RecyclerView.Adapte
         return adm.getItemViewType(filteredData!!, position)
     }
 
-    protected fun clickable(delegate: ListAdapterDelegate<ListItem>): ListAdapterDelegate<ListItem> {
+    protected fun clickable(delegate: ListAdapterDelegate<*>): ListAdapterDelegate<*> {
         delegate.setDelegateClickListener(this)
         return delegate
     }
